@@ -1,0 +1,6 @@
+# Source material and local tooling, not part of the published site
+bio/
+logo/
+.claude/
+a-envoyer-sur-infomaniak/
+*.zip

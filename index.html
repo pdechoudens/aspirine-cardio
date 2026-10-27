@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aspirine Cardio — Blues-pop-rock-fusion de Genève</title>
+  <meta name="description" content="Aspirine Cardio, groupe genevois blues-pop-rock-fusion : dates de concerts, bio et vidéos.">
+  <meta property="og:title" content="Aspirine Cardio">
+  <meta property="og:description" content="Un remède contre le blues du cœur ! Groupe genevois blues-pop-rock-fusion.">
+  <meta property="og:image" content="assets/logo.jpg">
+  <meta name="theme-color" content="#000000">
+  <link rel="icon" href="assets/logo.jpg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="nav">
+    <a class="nav-brand" href="#top" aria-label="Aspirine Cardio — accueil">AC<span class="pulse-dot"></span></a>
+    <nav>
+      <a href="#concerts">Concerts</a>
+      <a href="#bio">Bio</a>
+      <a href="#videos">Vidéos</a>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <section class="hero">
+      <img class="hero-logo" src="assets/logo.jpg" alt="Aspirine Cardio" width="1536" height="1024">
+      <p class="tagline">Un remède contre le blues du cœur&nbsp;!</p>
+      <svg class="ecg" viewBox="0 0 600 60" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0 30 H220 L235 30 L245 8 L258 52 L270 18 L280 30 H330 L340 22 L350 30 H600" />
+      </svg>
+      <a class="btn" href="#concerts">Prochains concerts</a>
+    </section>
+
+    <section id="concerts" class="section">
+      <h2>Concerts</h2>
+      <ul id="upcoming" class="gigs"></ul>
+      <p id="no-upcoming" class="empty" hidden>Prochaines dates bientôt annoncées — restez branchés&nbsp;!</p>
+
+      <details id="past-wrap" class="past" hidden>
+        <summary>Concerts passés</summary>
+        <ul id="past" class="gigs gigs-past"></ul>
+      </details>
+    </section>
+
+    <section id="bio" class="section">
+      <h2>Bio</h2>
+      <div class="bio">
+        <p class="lead"><strong>Aspirine Cardio</strong> est un remède contre le blues du cœur&nbsp;!</p>
+        <p>Les 5 membres du groupe genevois soignent avec un répertoire <strong>blues-pop-rock-fusion</strong>, partiellement composé par eux-mêmes et partiellement repris «&nbsp;à leur sauce&nbsp;».</p>
+        <p>Basse, guitare, section rythmique, harmonica et chant au féminin vous transmettront leurs émotions, rôdées au fil du temps par l'amitié qui les lie et par leur amour de la musique «&nbsp;vivante&nbsp;».</p>
+        <p class="dose">À déguster sans modération&nbsp;!</p>
+      </div>
+
+      <ul class="lineup" aria-label="Instruments">
+        <li>Chant</li>
+        <li>Guitare</li>
+        <li>Basse</li>
+        <li>Batterie</li>
+        <li>Harmonica</li>
+      </ul>
+    </section>
+
+    <section id="videos" class="section">
+      <h2>Vidéos</h2>
+      <div class="videos">
+        <div class="video" data-id="ySEDAh0N88I" data-title="Wish you well"></div>
+        <div class="video" data-id="jNcPbc78Q_k" data-title="It's Ok"></div>
+        <div class="video" data-id="VfTvC6d7C4I" data-title="Bluefinger"></div>
+        <div class="video" data-id="ddRiKWYAAWo" data-title="Proud Mary (cover)"></div>
+      </div>
+      <p class="center">
+        <a class="btn btn-ghost" href="https://www.youtube.com/@aspirinecardio" target="_blank" rel="noopener">Notre chaîne YouTube</a>
+      </p>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Aspirine Cardio — Genève</p>
+    <p><a href="https://www.youtube.com/@aspirinecardio" target="_blank" rel="noopener">YouTube</a></p>
+  </footer>
+
+  <script src="concerts.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
