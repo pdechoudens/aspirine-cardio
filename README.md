@@ -14,6 +14,7 @@ Une seule page, qui contient :
 - **Les concerts :** les prochaines dates, et les concerts passés repliés en dessous.
 - **La bio :** la présentation du groupe et les instruments.
 - **Les vidéos :** les 4 clips YouTube du groupe, plus un lien vers la chaîne.
+- **Le contact :** un formulaire pour écrire au groupe.
 
 La page s'affiche correctement sur ordinateur comme sur téléphone.
 
@@ -53,12 +54,21 @@ Il n'y a ni base de données, ni mot de passe, ni logiciel à installer : le sit
 |---|---|
 | `index.html` | Le contenu de la page (textes, sections) |
 | `style.css` | L'apparence (couleurs, polices, mise en page) |
-| `main.js` | Affiche les concerts et lance les vidéos |
+| `main.js` | Affiche les concerts, lance les vidéos et envoie le formulaire de contact |
 | `concerts.js` | **La liste des concerts** (le seul fichier à modifier) |
 | `assets/logo.jpg` | Le logo |
 | `CNAME` | Indique à GitHub le nom de domaine du site |
 
 Pour les vidéos, seule la miniature est affichée au départ. Le lecteur YouTube ne se charge que lorsque le visiteur clique : la page reste rapide, et YouTube ne dépose pas de cookies tant qu'on ne lance pas de vidéo.
+
+---
+
+## Le formulaire de contact
+
+GitHub Pages ne sait pas envoyer d'e-mails : les messages passent donc par le service **Web3Forms**, qui les transfère à l'adresse e-mail liée à sa clé d'accès.
+
+- **La clé** se trouve dans `index.html`, dans le champ `access_key`. Elle peut rester visible dans le code de la page : elle ne donne aucun accès aux messages.
+- **Pour changer l'adresse qui reçoit les messages,** créez une nouvelle clé sur [web3forms.com](https://web3forms.com) avec la nouvelle adresse, puis remplacez la clé dans `index.html`.
 
 ---
 

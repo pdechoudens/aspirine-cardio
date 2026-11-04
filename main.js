@@ -69,4 +69,42 @@ document.querySelectorAll(".video").forEach((el) => {
   });
 });
 
+// Formulaire de contact : envoi via Web3Forms, sans quitter la page.
+// En cas d'échec, le message reste dans le formulaire pour pouvoir réessayer.
+(function () {
+  const form = document.getElementById("contact-form");
+  const status = document.getElementById("contact-status");
+  const button = form.querySelector("button");
+
+  const show = (text, isError) => {
+    status.textContent = text;
+    status.classList.toggle("is-error", isError);
+    status.hidden = false;
+  };
+
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    button.disabled = true;
+    button.textContent = "Envoi…";
+    status.hidden = true;
+
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: new FormData(form),
+      });
+      const result = await response.json();
+      if (!result.success) throw new Error(result.message);
+      form.reset();
+      show("Merci ! Votre message est bien parti, nous vous répondrons dès que possible.", false);
+    } catch (error) {
+      show("Le message n'a pas pu être envoyé. Merci de réessayer un peu plus tard.", true);
+    } finally {
+      button.disabled = false;
+      button.textContent = "Envoyer";
+    }
+  });
+})();
+
 document.getElementById("year").textContent = new Date().getFullYear();
