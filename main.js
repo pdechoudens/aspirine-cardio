@@ -69,6 +69,15 @@ document.querySelectorAll(".video").forEach((el) => {
   });
 });
 
+// Audio : lancer un morceau met en pause celui qui jouait.
+document.querySelectorAll(".track audio").forEach((audio, _, all) => {
+  audio.addEventListener("play", () => {
+    all.forEach((other) => {
+      if (other !== audio) other.pause();
+    });
+  });
+});
+
 // Formulaire de contact : envoi via Web3Forms, sans quitter la page.
 // En cas d'échec, le message reste dans le formulaire pour pouvoir réessayer.
 (function () {

@@ -215,6 +215,28 @@ h2::after {
   font-weight: 400;
 }
 
+/* Écouter */
+.tracks-intro { margin: 0 0 20px; font-size: 1.1rem; }
+.tracks { list-style: none; margin: 0; padding: 0; }
+.track {
+  display: grid;
+  grid-template-columns: 1fr minmax(0, 2fr);
+  align-items: center;
+  gap: 20px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+}
+.track-title {
+  font: 1.3rem/1.2 var(--display);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.track audio {
+  display: block;
+  width: 100%;
+  color-scheme: dark;
+}
+
 /* Vidéos */
 .videos {
   display: grid;
@@ -344,6 +366,7 @@ h2::after {
   .nav nav { gap: 10px; }
   .nav nav a { font-size: 0.72rem; letter-spacing: 0.06em; }
   .videos { grid-template-columns: 1fr; }
+  .track { grid-template-columns: 1fr; gap: 8px; }
   .gig { grid-template-columns: 64px 1fr; gap: 14px; }
   .gig-link { grid-column: 2; justify-self: start; }
   .gig-date .day { font-size: 2rem; }
