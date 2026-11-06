@@ -220,6 +220,12 @@ h2::after {
   margin-top: 40px;
   border: 1px solid var(--line);
 }
+.bio-photo-credit {
+  margin: 8px 0 0;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
 
 /* Écouter */
 .tracks-intro { margin: 0 0 20px; font-size: 1.1rem; }
@@ -237,6 +243,13 @@ h2::after {
   letter-spacing: 0.04em;
   text-transform: uppercase;
 }
+.track-credits {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.78rem;
+  line-height: 1.4;
+  color: var(--muted);
+}
 .track audio {
   display: block;
   width: 100%;
@@ -249,6 +262,12 @@ h2::after {
   grid-template-columns: repeat(2, 1fr);
   gap: 28px;
   margin-bottom: 40px;
+}
+.videos-credits {
+  margin: 0 0 40px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--muted);
 }
 .video h3 {
   margin: 10px 0 0;
